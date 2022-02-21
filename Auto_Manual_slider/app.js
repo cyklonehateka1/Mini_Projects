@@ -23,3 +23,33 @@ const manualNav = manual => {
         currentSlide = i;
     })
  });
+
+//  Autoplay
+const repeat = activeClass => {
+    let active =document.getElementsByClassName('active');
+    let i = 1;
+
+    let repeater = () => {
+        timeoutFunction = () => {
+
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            })
+
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+
+            if (slides.length == i) {
+                i = 0;
+            }
+            if (i >= slides.length) {
+                return;
+            }
+            repeater()
+        }
+        setTimeout(timeoutFunction, 6000);
+    }
+    repeater()
+};
+repeat()
