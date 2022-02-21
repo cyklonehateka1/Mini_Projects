@@ -5,10 +5,10 @@ let currentSlide = 1;
 // Manual Navigation
 const manualNav = manual => {
     slides.forEach((slide) => {
-        slide.classList.remove('active')
+        slide.classList.remove('active');
 
         btns.forEach((btn) => {
-            btn.classList.remove('active')
+            btn.classList.remove('active');
         });
 
     });
@@ -46,10 +46,10 @@ const repeat = activeClass => {
             if (i >= slides.length) {
                 return;
             }
-            repeater()
+            repeater();
         }
         setTimeout(timeoutFunction, 6000);
     }
-    repeater()
+    repeater();
 };
-repeat()
+repeat();
