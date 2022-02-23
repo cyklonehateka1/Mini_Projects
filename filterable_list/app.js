@@ -4,6 +4,9 @@ const ul = document.getElementById('name');
 // This gets the DOM elements into an array
 const li = ul.querySelectorAll('li.collection-item')
 
+
+
+
 // Function for the callback value parameter
 let filterNames = () => {
     
@@ -26,7 +29,6 @@ let filterNames = () => {
 
     }
 }
-filterNames()
 
 filterInput.addEventListener('keyup', filterNames);
 
