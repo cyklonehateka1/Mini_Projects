@@ -72,7 +72,7 @@ a {
 
 .cart:before {
   position: absolute;
-  content: "3";
+  content: attr(data-count);
   width: 25px;
   height: 25px;
   font-size: 12px;
@@ -83,7 +83,11 @@ a {
   background: red;
   color: white;
   cursor: pointer;
-  /* opacity: 0; */
+  opacity: 0;
+}
+
+.cart.on:before {
+  opacity: 1;
 }
 
 main {
@@ -273,9 +277,13 @@ button.add {
   overflow-y: auto;
   padding: 20px;
   position: absolute;
-  /* top: -700px; */
+  top: -700px;
   left: 5%;
   transition: 0.5s;
+}
+
+.cart-field.display {
+  top: 200px;
 }
 
 .cart-field .item,
