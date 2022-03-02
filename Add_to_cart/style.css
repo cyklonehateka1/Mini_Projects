@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+nav {
+  width: 80%;
+  height: 80px;
+  background: white;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo img {
+  width: 100px;
+  float: left;
+}
+
+.nav-menu {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu li {
+  list-style: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-right {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right li {
+  list-style: none;
+  margin: 0 15px;
+  color: #555;
+  font-size: 25px;
+  padding: 8px 20px;
+}
+
+.nav-right li:last-child {
+  border: 2px solid;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.nav-right li a {
+  display: flex;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart:before {
+  position: absolute;
+  content: "3";
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  border-radius: 15px;
+  top: -20px;
+  text-align: center;
+  background: red;
+  color: white;
+  cursor: pointer;
+  /* opacity: 0; */
+}
+
+main {
+  width: 100%;
+  height: 580px;
+  padding: 10px 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 24%;
+  height: 250px;
+  background: whitesmoke;
+  padding: 5px;
+  position: relative;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.item:hover {
+  height: 450px;
+}
+
+.item:hover .dat {
+  padding: 10px;
+  height: 250px;
+}
+
+.item:hover img {
+  transform: scale(0.8);
+}
+
+.item img {
+  width: 100%;
+  margin: auto;
+  transition: inherit;
+  transform: scale(1.09);
+}
+
+.dat {
+  width: 100%;
+  height: 0;
+  background: #eee;
+  padding: 0;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  transition: inherit;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.dat p {
+  margin: 10px auto;
+}
+
+.dat strong {
+  display: inline-block;
+  width: 100%;
+}
+
+.dat p:first-child strong {
+  width: 75%;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.in span {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  background: white;
+  display: inline-block;
+  text-align: center;
+  margin: 0 6px;
+}
+
+.in span.active {
+  background: gray;
+  color: white;
+}
+
+.in:nth-of-type(2n) span {
+  background: #55299d;
+  border: 2px solid #ccc;
+}
+
+.in:nth-of-type(2n) span:first-child {
+  background: #0097d6;
+}
+
+.in:nth-of-type(2n) span:last-child {
+  background: #f04271;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  background: #00b0c4;
+  margin: 5px 30px 0 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button.add {
+  background: #f04271;
+  position: absolute;
+  left: 125px;
+}
