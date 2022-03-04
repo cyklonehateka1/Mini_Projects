@@ -332,4 +332,5 @@ button.add {
 }
 
 .cart-field .image-carior.active {
+  display: none;
 }
