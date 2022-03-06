@@ -1,34 +1,33 @@
-const filterInput = document.getElementById('filterInput');
-const ul = document.getElementById('name');
+const searchField = document.querySelector('.search-field');
+const button = document.getElementById('button');
+const item = document.querySelectorAll('.collection-item');
+const ul = document.getElementsByTagName('ul')
 
-// This gets the DOM elements into an array
-const li = ul.querySelectorAll('li.collection-item')
+searchField.addEventListener('keyup', () => {
 
+    const searchValue = searchField.value.toUpperCase();
 
-
-
-// Function for the callback value parameter
-let filterNames = () => {
-    
-    // getting the value of the input
-    let filterValue = filterInput.value.toUpperCase();
-
-    // loop through collection-items lis
-    for (let i = 0; i < li.length; i++) {
-
-        // getting all the a elements in accordance with the iteration
-        let a = li[i].getElementsByTagName('a')[0];
-
-        // if a character of the value of 'a' natches the input charaters
-        // ">" -1 indicates a minimum of 1 match
-        if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-            li[i].style.display = ''
-        } else {
-            li[i].style.display = 'none'
+    for (i = 0; i < item.length; i++) {
+        let a = item[i].getElementsByTagName('a')[0]
+        if (a.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+            item[i].style.display = ''
         }
-
+        else {
+            item[i].style.display = 'none'
+        }
     }
-}
+});
 
-filterInput.addEventListener('keyup', filterNames);
+button.addEventListener('click', () => {
+    const searchValue = searchField.value.toUpperCase();
 
+    for (i = 0; i < item.length; i++) {
+        let a = item[i].getElementsByTagName('a')[0]
+        if (a.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+            item[i].style.display = ''
+        }
+        else {
+            item[i].style.display = 'none'
+        }
+    }
+});
